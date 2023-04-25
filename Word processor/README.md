@@ -24,10 +24,10 @@ This implementation shows the use of following Design Patterns:
             - If we have a document that starts with 250 characters in font A, then has 10 characters in font B and finally 320 characters in font A. The RunArray store the runs: 250, 10 and 320. It also store the font i.e associated with each run. Given any index (0 to 579 or 1 to 580) the run array will return the font used by the character in that location of the document. So give index 12 the RunArray will return Font A,  given the index 255 will return Font B. When adding runs to the RunArray one needs to indicate the index the run starts at, the length of the run and the value at the run array. 
             
             - So for the current example we might have:
-                   RunArray test = new RunArray();
-                   test.addRun(0, 250, fontA);
-                   test.addRun(250, 10, fontB);
-                   test.appendRun(320, fontA);
+                   run_array = RunArray()
+                   run_array.add_run(0, 144, fontA)
+                   run_array.add_run(144, 68, fontB)
+                   run_array.append_run(320, fontA)
                    
             - If the run is appended the run array can determine the start index of the run.
             
